@@ -20,7 +20,7 @@ jobs:
     - name: Sleep
       uses: jakejarvis/wait-action@master
       with:
-      time: '120s'
+        time: '120s'
 
     - name: Check running containers
       run: docker ps -a
