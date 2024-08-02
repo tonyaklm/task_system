@@ -1,0 +1,6 @@
+networks:
+  task-network:
+    name: "task-network"
+include:
+  - tools/database/docker-compose.yml
+  - tools/services/docker-compose.yml

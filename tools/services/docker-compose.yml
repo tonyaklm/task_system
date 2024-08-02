@@ -1,0 +1,16 @@
+services:
+  task-service:
+    container_name: "task-service"
+    image: task-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    build:
+      context: ../../
+      dockerfile: task_service/src/Dockerfile
+    env_file:
+      - ../../.env
+    networks:
+      - task-network
+    depends_on:
+      - postgresql
